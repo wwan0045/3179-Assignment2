@@ -39,7 +39,12 @@
                    "bind": "legend"
                    }
                },
-       "mark" : "line",
+       "mark" : {
+        "type": "line",
+        "point": {
+          "filled": false,
+          "fill": "white"
+       }},
        "encoding":{
                 
            "x":{
