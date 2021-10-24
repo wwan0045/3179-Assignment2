@@ -1,0 +1,158 @@
+html{
+    height: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: -60px;
+    margin-bottom: 60px;    
+}
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #fff2fc;
+}
+
+h1{
+    text-align: center;
+    background-color: plum;
+    color: rgb(223, 211, 228);
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+    font-size: 3em;
+}
+h2{
+    text-align: center;
+    background-color: plum;
+    color: rgb(48, 21, 59);
+    font-family: "Arial", sans-serif;
+    font-size: 100;
+}
+
+
+h3{
+    display:inline;
+    font-family: "Arial", sans-serif;
+    color: rgb(68, 111, 112);
+    font-size: 15px;
+}
+
+/* Paragraphs  */
+p {
+    color: #2e1446;
+    font-size: 20px;
+    font-family: 'arial', sans-serif;
+    line-height: 1.5;
+}
+
+b{
+    color:rgb(195, 21, 204);
+    font-size: 20px;
+}
+
+div.content {
+    width: 1000px;
+    height: 2999px;
+    margin:0 auto; }
+/*Class Selector
+.class-name{
+    propert:value;
+}
+*/
+.container-heading1{
+    padding-top: 50px;
+    padding-bottom:0px;
+    font-size: 30px;
+}
+
+.container-heading2{
+    padding-top: 20px;
+    padding-bottom:20px;
+    font-size: 35px;
+}
+
+.container-heading3{
+    padding-top: 20px;
+    padding-bottom:20px;
+    font-size: 30px;
+}
+
+.container-heading4{
+    padding-top: 20px;
+    padding-bottom:20px;
+    font-size: 30px;
+}
+
+
+.container-subheading{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container-caption{
+   position:absolute;
+   }
+.subheading{
+    position:absolute;
+    top:300px;
+    left:100px;
+}
+
+
+#pure-u-1-1{
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+#pure-u-1-2{
+    margin-left: 100px;
+    margin-right: 100px;
+    width:50vw;
+    height:50vw;
+}
+
+.pure-u-1 img{
+    width:100vw;
+}
+
+/* sets width and height of all images within pure 
+1 2 class selector */
+.pure-u-2 img{
+    width:50vw;
+    height:50vw;
+    margin:50;
+
+}
+
+.pure-u-3{
+    margin-top:30px;
+    height:30vw;
+}
+
+#text_div{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+/* Image 1 - World Map*/
+.container_vis1{
+    padding-top: 50px;
+    padding-bottom:50px
+}
+
+.subheading_vis1{
+    position: absolute;
+    top:400px;
+    left:200px;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
