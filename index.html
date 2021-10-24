@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <link rel="stylesheet" href="A2.css">
+    <link rel="stylesheet" href="flexbox.css">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -11,21 +16,149 @@
     
     <script src="vega_lite_vis.js"></script>
 
-    <title>Homework Week 9 Map Idiom </title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+    
+
 </head>
-
 <body>
-    <h1>Homework Week 9 Map Idiom</h1>
-    <div id="bar_chart">
+    <div class="content">
+    <body>
+        <div class="container-heading1">
+            <h1>Where Is Your Next Tourist Destination?</h1>
+        </div>
+    </body>
+
+    <div class="pure-g ">
+        <div class="pure-u-1-2 ">
+            <div id="text_div">
+                <p class="center"></p>
+                <p> At the start of 2020, COVID-19 decimated global tourism as countries struggled to prevent surges 
+                    in infections and deaths. Despite Australians managing the spread of COVID-19 
+                    better than most countries, they too were heavily restricted on overseas tourism. 
+                    <br><br>
+                
+                    <!--Now nearing the end of 2021, high vaccination numbers have led to the ease of COVID-19 restrictions in Australia. 
+                    This means that restrictions on outbound travelling are also being lifted. 
+                    <br><br>-->
+                
+                    This report is intended to help Australians make a better decision on which country they might 
+                    want to visit first once restrictions have fully lifted on outbound tourism. The presentation 
+                    will focus on past tourism trends prior to COVID-19 on the basis of: <b>tourism arrivals per country</b>, 
+                    <b>where people are spending the most on tourism</b>, <b>safety of country through GPI (Global Peace Index)</b>
+                    and <b>affordability</b>.
+                </p>
+            </div>
+        
+        </div>
+
+        <div class="pure-u-1-2 ">
+             <img src="travel.jpg" 
+                style="width:450px;height:450px;position:relative;right: -50px;bottom: -20px"/>
+        </div>
     </div>
+ 
+
+
+<!----Image 1 Map--->
+<h2 class="container-heading2">Where Did Tourists Travel The Most Before Covid-19? </h2>
+    
+    <div class="pure-g">
+        <div class="pure-u-1-1" style="width:1000px;height:700px;position:relative;right:-30px;bottom: 0px;">
+            <div id="map"></div>
+        </div>
+    </div>  
+
+    <div class="pure-u-1-1">
+        <div id="text_div" style="position:relative;top: -100px;">
+            <p>
+                From this world map in <b>2019</b>, it is clear that the countries with the most tourist arrivals are the <b>United States, China
+                </b>and a <b>select few in the European Continent.</b>
+            <p>
+        </div>
+    </div>
+
+    
+<!----Image 2 Multiline Chart--->
+
+<h2 class="container-heading2" style="position:relative;top:-100px;">Where Did Tourists Spend The Most Money? </h2>
+    <div class="pure-g" style="position:relative;top:-100px">
+        <div class="pure-u-1-1">
+            <div id="multiline" style="width:900px;height:400px;"></div>
+        </div>
+   
+        <div class="pure-u-1-1">
+            <div id="text_div" style="position:relative;bottom: -15px;">
+                <p>
+                    In total, countries in <b style="color: #ff7f00;">Europe</b> have consistently received the <b>most revenue</b> from tourists since 1995.
+                </p>
+                <p>
+                    In 2019, tourists spent a whopping <b>407.7 billion USD</b> in <b style="color: #ff7f00;">Europe</b> while travelling! 
+                </p>
+            </div>
+        </div>
+    </div>  
+
+
+    
+<!----Image 3 Scatterplot Matrix--->
+<h2 class="container-heading3" style="position:relative;top:-80px;">Where Are The Safest Countries? </h2>
+    <div class="pure-g">
+        <div class="pure-u-1-1" style="position:relative;top:-60px;" >
+            <div id="scatplot"></div>
+        </div>
+
+        <div class="pure-u-1-1">
+            <div id="text_div" style="position:relative;bottom:50px;">
+                <p>
+                    <b>Global Peace Index </b> measures a country's <b>safety</b>. 
+                    The <b>lower</b> the index, the <b>safer</b> the country.
+                                       
+                </p>
+                <p>
+                    <b>60%</b> of the top 10 countries ranked in the 2019 Global Peace Index are <b style="color: #ff7f00;">European</b> countries.
+                </p>
+                <p>
+                   If you want to travel to the <b>safest</b> <b style="color: #ff7f00;">European</b> countries, you can travel to
+                   <b style="color: #ff7f00;">Slovenia</b>,
+                   <b style="color: #ff7f00;">Switzerland</b>,
+                   <b style="color: #ff7f00;">Austria</b>,
+                   <b style="color: #ff7f00;">Portugal</b> or 
+                   <b style="color: #ff7f00;">Denmark</b>.
+                </p>
+            </div>
+        </div>
+    </div>  
+
+<!----Image 3 Scatterplot Matrix--->
+<h2 class="container-heading3" style="position:relative;top:-60px;">Affordable Countries to Visit </h2>
+    <div class="pure-g">
+        <div class="pure-u-1-1" style="position:relative;top:-60px;" >
+            <div id="hbar"></div>
+        </div>
+    </div>      
+
+    <div class="pure-u-1-1">
+        <div id="text_div" style="position:relative;bottom:50px;">
+            <p>
+                Based on the 2019 data available, the list of 10 countries represent the 
+                <b>lowest amount of money spent per tourist</b>. 
+                                   
+            </p>
+
+            <p>
+            <b style="color: #ff7f00;">Montenegro</b>,
+            <b style="color: #ff7f00;">Croatia</b>,
+            <b style="color: #ff7f00;">Hungary</b> and
+            <b style="color: #ff7f00;">Turkey</b> 
+
+            are <b style="color: #ff7f00;">European</b> countries 
+            where the average tourist spent less than <b>less than $100 USD</b>! 
+            </p>  
+            
+        </div>
+    </div>    
+
+</div>
 </body>
-    
-<body>
-    <h1>Homework Week 10 Map Idiom</h1>
-    <div id="line_chart">
-    </div>
-    
-
-</body>    
-
 </html>
