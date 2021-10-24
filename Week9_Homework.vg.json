@@ -2,12 +2,51 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 500,
-    "title": { "text": "Tourism by Country, 2019" },
-    "projection": {"type": "equirectangular"},
+    "title": { "text": "Inbound Tourism, 2019","fontSize":30 },
+    "projection": {"type": "equalEarth"},
     "data": {
        "url": "https://raw.githubusercontent.com/wwan0045/3179-HomeworkWk9/main/world.json",
        "format": {"type": "topojson", "feature": "world.geo"}
        },
+
+    "params": [{
+            "name": "zoom_level",
+            "value": 120,
+            "bind": {
+                "input": "range",
+                "min": 150,
+                "max": 700,
+                "step": 50,
+                "name": "Zoom:"}
+        },
+         {
+            "name": "center_to",
+            "value": [0, 0],
+            "bind": {
+            "input": "select",
+            "options": [
+            [0,0],
+            [30, 60],
+            [36.3, -0.1],
+            [-40,-25],
+            [-90, 40],
+            [147.1, -38.1],
+            [116,40]
+            ],
+            "labels": ["World", "Europe", "Africa", "South America", "North America","Oceania","Asia"],
+            "name": "Map Centre: "
+            }
+        }
+    ],
+    "projection": {
+        "type": "equirectangular",
+        "center": {"expr": "center_to"},
+        "scale": {"expr": "zoom_level"}
+    },
+
+
+              
+    
    "layer":[
         {
          "transform": [
@@ -42,15 +81,19 @@
            "color":{
                "field":"Tourist Arrivals",
                "type":"quantitative",
-               "scale":{"type":"log"}
+               "scale":{
+                   "type": "ordinal",    
+                    "range": ["#98FB98","#006400"]}
            },        
            "tooltip":[
                {"field": "properties.name", "type":"nominal","title":"Country"},
-               {"field": "Tourism","type":"quantitative"}
+               {"field": "Tourism","type":"quantitative","title":"Number of tourists"}
            ]
            }
        }
    
    ]
    }
+
+   
    
