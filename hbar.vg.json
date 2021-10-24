@@ -1,0 +1,73 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background":"#fff2fc",
+    "width": 800,
+    "height": 500,
+    "title": { "text": "Top 10 Affordable Countries, 2019","fontSize":30},
+   
+    "data": {
+       "url": "https://raw.githubusercontent.com/wwan0045/3179-HomeworkWk9/main/2019_Tourist%20Arrivals_Global%20Peace%20Index.csv"
+   },
+   
+   
+   "transform": [
+       {"filter":"datum.Avg>0"},
+       {"filter":"datum.Avg<100"}],
+       
+   
+   "layer":[
+       {
+           "mark":"bar",
+           "encoding": {
+               "x":{
+                       "field":"Avg",
+                       "type": "quantitative",
+                       "title":"Average Expenditure per Tourist ($USD)"
+                   },
+               "y":{
+                       "field":"Country",
+                       "type": "nominal",
+                       "title":"Countries",
+                       "sort":"x"
+               },
+               "color": {
+                   "field":"Continent",
+                   "type": "nominal",
+              "scale": {
+              "domain": [   
+                  "Europe",
+                  "Africa",
+                  "Asia"
+              ],
+              "range": [
+                  "#ff7f00",
+                  "#808080",
+                  "#808080"
+                  ]
+                   }
+   
+               },
+               "tooltip": [
+              {"field": "Country", "type": "nominal"},
+              {"field": "Continent", "type": "nominal"},
+              {"field": "Tourism_Arrivals", "title": "Tourism Arrivals", "type": "quantitative", "format": ","},
+              {"field": "Avg", "title": "Average Expenditure per Tourist ($USD)", "type": "quantitative", "format": "$"}
+               ]   
+               
+           },
+           "opacity": {
+              "condition": {"selection": "continent_highlight", "value": 0.7},
+              "value": 0.1
+           },
+           "height": {"step": 17}
+           
+   
+           
+       }
+   
+   
+           
+   ]
+   
+   }
+   
