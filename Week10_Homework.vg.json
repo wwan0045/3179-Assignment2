@@ -96,7 +96,7 @@
                {"field": "Region","title":"Continent", "type": "nominal"},
                {"field": "Year", "type": "quantitative"},
                {
-               "field": "sum_Expenditure",
+               "field": "sum_Expenditure","title":"Total Tourism Expenditure",
                "type": "quantitative",
                "format": ".2f"
                } 
