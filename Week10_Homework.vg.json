@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background":"#fff2fc",
     "width": 800,
     "height": 500,
-    "title": { "text": "Global Tourism by Expenditure, 1995 - 2019" },
+    "title": { "text": "Global Tourism by Expenditure, 1995 - 2019","fontSize":30},
    
     "data": {
        "url": "https://raw.githubusercontent.com/wwan0045/3179-HomeworkWk9/main/Global%20Tourism%20-%20Expenditure.csv"
@@ -12,16 +13,17 @@
            "name": "region_selection",
            "bind": {
                "input": "select",
-               "options": [null,"Americas","Europe","Africa","Asia","Oceania"],
+               "options": [null,"North America","South America","Europe","Africa","Asia","Oceania"],
                "labels":[
                    "Show All",
-                   "Americas",
+                   "North America",
+                   "South America",
                    "Europe",
                    "Africa",
                    "Asia",
                    "Oceania"
                    ],
-               "name": "Region Selection: "
+               "name": "Continent Selection: "
                }
            }
        ],
@@ -36,7 +38,8 @@
                "region_highlight": {
                    "type": "multi",
                    "fields": ["Region"],
-                   "bind": "legend"
+                   "bind": "legend",
+                   "title":"Continent"
                    }
                },
        "mark" : {
@@ -64,10 +67,12 @@
            
            "color": {
                "field": "Region",
+               "title":"Continent",
                "type": "nominal",
                "scale": {
                    "domain": [
-                       "Americas",
+                       "North America",
+                       "South America",
                        "Europe",
                        "Africa",
                        "Asia",
@@ -75,9 +80,10 @@
                        ],
                    "range": [
                        "#808080",
-                       "#984ea3",
                        "#808080",
-                       "#ff7f00 ",
+                       "#ff7f00",
+                       "#808080",
+                       "#808080",
                        "#808080"
                        ]                
                }
@@ -87,7 +93,7 @@
                "value": 0.1
            },       
            "tooltip": [
-               {"field": "Region", "type": "nominal"},
+               {"field": "Region","title":"Continent", "type": "nominal"},
                {"field": "Year", "type": "quantitative"},
                {
                "field": "sum_Expenditure",
